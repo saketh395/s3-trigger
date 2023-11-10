@@ -1,0 +1,12 @@
+name: Lambda Triggered Workflow
+on:
+  repository_dispatch:
+    types: "my-event"  # Change this to match your event type
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a step
+        run: echo "GitHub workflow triggered by Lambda"
