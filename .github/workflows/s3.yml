@@ -2,7 +2,9 @@ name: Lambda Triggered Workflow
 on:
   repository_dispatch:
     types: "my-event"  # Change this to match your event type
-
+permissions:
+      id-token: write
+      contents: read
 jobs:
   monitor-s3-events:
     runs-on: ubuntu-latest
