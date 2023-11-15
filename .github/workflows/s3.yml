@@ -21,8 +21,9 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
-          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws_access_key_id : ASIA3IDLKAAK4SUXYBSA
+          aws_secret_access_key : FHg+4NhEjfSvg4uSjPBDEQA7fZPLTFyMDUPROn41
+          aws_session_token : IQoJb3JpZ2luX2VjECoaCXVzLWVhc3QtMSJHMEUCIQDdRbKv9JB95GmaJqzfVc+P4Wfhs6O+BNR0otFZjyldsAIgb3hA7agAAzIzGJV+5vz4oIIGte79aS2qOsTsXXOw3iYqhgMIcxAAGgw3NzMzMTkxNjM5MjUiDAHqn2sXN5L3dq0kjCrjAsMwIfKZYRMba4zoWmazsA7W3f19Jw4zi6aXykshA2DP2DQ32nX17gs/cizDco3mlHzm0SqhoGo72XGhXg4Jlow58yOq1VLHy87XT3gBdzpq49xuHJEDXgzK1rlP8b25fCEdKlQ/VZM0IGnDZk5D4n/JDDZD5XzI+C+2x7gJCn5+kfsK0ecQ81MKjyYG3LNWLeKI3LdzvfG9IvBi6lweTUoMTNyf7T7bq7syo/mBWtk0DJwzHeGKZA0UHPxLzUTgi2da0IXUFyU50cIw1TfvOIm0S6w70jbFFVKlqRe8wheAa72Sr/dhm4+KsBMgPdZg/HpyylicujSHFQecjqndbmin7XvJWbjCe5282sUD8RBWHCjYSPPj+QMQJ5jgFoW9AAne3LxIOjYXv85PpoUblFb2Kh6IBbbAOIjSNvcJWO3wUiYlNhZFZ2VdMCIQXccxRL3uA8SCiwaRm6cqERb7DmQpIfwwxqrSqgY6pgFuQfkjNBe63ilA6eg2FaQdfaZBzavPJ85/FpXJefq5FQY7kVclcnwjEhUDoY0WLH/74MHle+zn1i0A5LzRsJnW6XzrWyeFYUgDabKV+OpnvKC5zdgUAfcwIsk81QuOTt0ssfuVYw14a17zV+gGEDmG+AC4WceNts/GgKbsZ/9EFGk6KnWgs3ys+bWBPP6Dc3G09mkRukGB7M8KLvi3GlQt68fjq5rN
           aws-region: us-east-1
         
       - name: List S3 Objects
