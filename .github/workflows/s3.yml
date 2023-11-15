@@ -4,9 +4,22 @@ on:
     types: "my-event"  # Change this to match your event type
 
 jobs:
-  build:
+  monitor-s3-events:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run a step
-        run: echo "GitHub workflow triggered by Lambda"
+      - name: Accessing secrets
+        run: echo "access key id-"+ ${{ secrets.AWS_ACCESS_KEY_ID }}
+
+      - name: Set up AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+        
+
+      - name: List S3 Objects
+        run: |
+          # Use AWS CLI command to list all files and folders in the S3 bucket
+          echo "Listing all files and folders in the S3 bucket..."
+          aws s3 ls s3://s3-hf-auto --recursive
