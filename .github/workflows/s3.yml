@@ -6,19 +6,22 @@ on:
 jobs:
   monitor-s3-events:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
+    # permissions:
+    #   id-token: write
+    #   contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
     
       - name: Set up AWS CLI
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          role-to-assume: arn:aws:iam::773319163925:role/s3_trigger
-          aws-region: us-east-1
-        
+        # uses: aws-actions/configure-aws-credentials@v4
+        # with:
+        #   role-to-assume: arn:aws:iam::773319163925:role/s3_trigger
+        #   aws-region: us-east-1
+        env:
+          AWS_ACCESS_KEY_ID: 'ASIA3IDLKAAK7XN6AU6W'
+          AWS_SECRET_ACCESS_KEY: 'D9xj4kSWSZlYu1L+Ruqzc7wpEDZmf85SYkYIFYXe'
+          AWS_REGION: 'us-east-1'
       - name: List S3 Objects
         run: |
           # Use AWS CLI command to list all files and folders in the S3 bucket
