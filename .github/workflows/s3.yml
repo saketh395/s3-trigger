@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Accessing secrets
-        run: echo "access key id-"+ ${{ var.cloud }}
+        run: echo "access key id-"+ ${{ vars.CLOUD }}
 
       - name: Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
