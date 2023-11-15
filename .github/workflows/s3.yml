@@ -16,7 +16,7 @@ jobs:
       - name: Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::773319163925:role/lambda-s3-trigger-role
+          role-to-assume: arn:aws:iam::773319163925:role/s3_trigger
           aws-region: us-east-1
         
       - name: List S3 Objects
