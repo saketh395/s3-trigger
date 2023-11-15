@@ -6,6 +6,7 @@ on:
 jobs:
   monitor-s3-events:
     runs-on: ubuntu-latest
+    environment: s3 trigger
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -13,8 +14,8 @@ jobs:
       - name: Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ASIA3IDLKAAK7XN6AU6W
+          aws-secret-access-key: D9xj4kSWSZlYu1L+Ruqzc7wpEDZmf85SYkYIFYXe
           aws-region: us-east-1
         
       - name: List S3 Objects
