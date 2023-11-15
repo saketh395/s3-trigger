@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
     
       - name: Set up AWS CLI
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ASIA3IDLKAAK7XN6AU6W
           aws-secret-access-key: D9xj4kSWSZlYu1L+Ruqzc7wpEDZmf85SYkYIFYXe
