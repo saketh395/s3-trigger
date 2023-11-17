@@ -26,6 +26,8 @@ jobs:
         
       - name: List S3 Objects
         run: |
+          echo "listing directory"
+          pwd
           # Use AWS CLI command to list all files and folders in the S3 bucket
           echo "Listing all files and folders in the S3 bucket..."
           aws s3 ls s3://s3-hf-auto --recursive
